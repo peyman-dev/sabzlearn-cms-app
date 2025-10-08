@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileDropdown from "./fragments/profile-dropdown";
 import Notifications from "./fragments/notifications";
-import Divider from "../../../../ui/divider";
+import Divider from "../../../ui/divider";
 import SearchInput from "./fragments/search-input";
 
 export default function Header() {

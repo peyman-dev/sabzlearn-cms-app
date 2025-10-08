@@ -1,5 +1,5 @@
 import React from "react";
-import { DEFAULT_AVATAR } from "../../../../../../core/lib/constants";
+import { DEFAULT_AVATAR } from "../../../../../core/lib/constants";
 
 export default function ProfileDropdown({ userName, role, avatarSrc }) {
   return (

@@ -9,11 +9,11 @@
 }
 
 @utility primary-bg {
-  @apply bg-gradient-to-t  from-[#F34147] to-[#F34147] border-10 border-[#F34147];
+  @apply bg-gradient-to-t  from-[#019d79] to-[#00bf8f] border-2  ;
 }
 
 @utility flex-center {
-    @apply flex items-center justify-center
+  @apply flex items-center justify-center;
 }
 
 body {

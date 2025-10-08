@@ -1,3 +1,4 @@
+/* Developed in sabzlearn.ir  */
 import React from "react";
 import Sidebar from "./modules/sidebar";
 import { Outlet } from "react-router-dom";
@@ -8,12 +9,16 @@ const ApplicationLayout = () => {
     <main id="root" className="flex ">
       <Sidebar />
 
-      <section id="content" className="grow *:px-6">
+      <section className="grow *:px-6">
         <Header />
-        <Outlet />
+
+        <div id="content" className="mt-6">
+          <Outlet />
+        </div>
       </section>
     </main>
   );
 };
 
 export default ApplicationLayout;
+/* Developed in sabzlearn.ir  */
