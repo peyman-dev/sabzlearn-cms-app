@@ -2,7 +2,7 @@ import React from "react";
 // ESLint-IG
 const SummaryCard = ({ title, value, Icon }) => {
   return (
-    <article className="h-[137px] rounded-lg hover:bg-gradient-to-t from-zinc-200/15 select-none cursor-pointer hover:shadow-md border flex justify-between flex-col primary-border-color shadow-sm py-[23.5px] px-4">
+    <article className="h-[137px] bg-white rounded-lg hover:bg-gradient-to-t from-zinc-200/15 select-none cursor-pointer hover:shadow-md border flex justify-between flex-col primary-border-color shadow-sm py-[23.5px] px-4">
       <div className="flex items-center justify-between">
         <p>{title}</p>
 

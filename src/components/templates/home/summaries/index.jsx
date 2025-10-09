@@ -3,7 +3,7 @@ import SummaryCard from "./fragments/summary-card";
 import { generateSummaries } from "./settings";
 
 export default function Summaries() {
-  // Fetch 'summaries' dynamicly and generate Options
+  // Fetch 'Items' dynamicly and generate Options
   const summaries = generateSummaries({
     adminsLength: 4,
     productsLength: 12,

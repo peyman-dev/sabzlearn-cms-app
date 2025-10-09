@@ -19,3 +19,31 @@
 body {
   @apply font-IRANSansX;
 }
+
+.pagination-button {
+  @apply cursor-pointer min-w-[32px] h-8 px-2 text-sm font-medium transition-all duration-200 rounded-md;
+}
+
+.active-tab {
+  @apply bg-black/10 text-black shadow-sm cursor-pointer;
+}
+
+.not-active-tab {
+  @apply text-gray-400 hover:text-black hover:bg-black/5;
+}
+
+.pagination {
+  @apply flex justify-center border-t p-4 primary-border-color items-center gap-1 *:cursor-pointer mt-8 ;
+}
+
+.pagination-prev-button {
+  @apply h-8 px-3 text-sm font-medium rounded-md transition-all duration-200;
+}
+
+.pagination-next-button {
+  @apply h-8 px-3 text-sm font-medium  rounded-md transition-all duration-200;
+}
+
+.pages-ended {
+  @apply opacity-30 cursor-not-allowed hover:bg-transparent hover:text-gray-400
+}

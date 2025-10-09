@@ -5,7 +5,7 @@ export const generateSummaries = ({
   productsLength,
   usersLength,
   ticketsLength,
-  adminsLength,
+  adminsLength = 3,
 }) => [
   {
     id: crypto.randomUUID(),
@@ -28,7 +28,7 @@ export const generateSummaries = ({
   {
     id: crypto.randomUUID(),
     title: "تعداد مدیران",
-    value: productsLength,
+    value: adminsLength,
     Icon: BiShoppingBag,
   },
 ];

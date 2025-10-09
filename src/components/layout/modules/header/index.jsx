@@ -6,7 +6,7 @@ import SearchInput from "./fragments/search-input";
 
 export default function Header() {
   return (
-    <div className="w-full h-20 border-b primary-border-color flex items-center justify-between *:flex *:items-center *:gap-3">
+    <div className="w-full h-20 border-b bg-white primary-border-color flex items-center justify-between *:flex *:items-center *:gap-3">
       <div>
         <SearchInput />
       </div>
