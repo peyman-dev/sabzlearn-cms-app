@@ -1,0 +1,20 @@
+import React from "react";
+import SummaryCard from "./fragments/summary-card";
+import { generateSummaries } from "./settings";
+
+export default function Summaries() {
+  // Fetch 'summaries' dynamicly and generate Options
+  const summaries = generateSummaries({
+    adminsLength: 4,
+    productsLength: 12,
+    ticketsLength: 5,
+    usersLength: 32,
+  });
+  return (
+    <div className="grid grid-cols-4 gap-5 mt-6">
+      {summaries.map((summary) => (
+        <SummaryCard {...summary} key={summary.id}/>
+      ))}
+    </div>
+  );
+}
