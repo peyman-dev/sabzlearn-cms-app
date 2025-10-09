@@ -12,7 +12,7 @@ const ApplicationLayout = () => {
       <section className="grow *:px-6">
         <Header />
 
-        <div id="content" className="mt-6">
+        <div id="content" className="mt-6 container mx-auto">
           <Outlet />
         </div>
       </section>
