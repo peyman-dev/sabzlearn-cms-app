@@ -9,7 +9,7 @@
 }
 
 @utility primary-bg {
-  @apply bg-gradient-to-t  from-[#019d79] to-[#00bf8f] border-2  ;
+  @apply bg-gradient-to-t  from-[#019d79] to-[#00bf8f]  border;
 }
 
 @utility flex-center {
