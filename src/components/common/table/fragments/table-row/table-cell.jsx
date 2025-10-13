@@ -1,6 +1,7 @@
 import React from 'react'
 
-const TableCell = ({children}) => {
+const 
+TableCell = ({children}) => {
   return (
     <div>
         {children}
