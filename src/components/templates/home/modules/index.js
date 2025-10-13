@@ -1,0 +1,187 @@
+import { BiShoppingBag } from "react-icons/bi";
+import { HiDocumentText, HiUsers } from "react-icons/hi2";
+import {
+  STATIC_PRODUCT_IMG,
+  STATIC_DESCRIPTION,
+} from "../../../../core/settings/constants";
+
+export const generateSummaries = ({
+  productsLength,
+  usersLength,
+  ticketsLength,
+  adminsLength = 3,
+}) => [
+  {
+    id: crypto.randomUUID(),
+    title: "تعداد محصولات",
+    value: productsLength,
+    Icon: BiShoppingBag,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "تعداد کاربران",
+    value: usersLength,
+    Icon: HiUsers,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "تعداد تیکت‌ها",
+    value: ticketsLength,
+    Icon: HiDocumentText,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "تعداد مدیران",
+    value: adminsLength,
+    Icon: BiShoppingBag,
+  },
+];
+
+export const productsTableHeadRow = [
+  "شناسه",
+  "عنوان محصول",
+  "وضعیت نمایش",
+  "قیمت",
+  "",
+];
+
+//? جهت خوانایی و پاکیزگی کد و جلوگیری از گمراهی دانشجو
+//? توضیحات و تصویر استاتیک به صورت کانستنت نوشته و ایمپورت شدن تا سورس کد خوانایی بهتری داشته باشد
+
+export const STATIC_PRODUCTS = [
+  {
+    id: crypto.randomUUID(),
+    title: "آیفون 17 پرومکس نارنجی",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 289_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Samsung S24 Ultra",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: false,
+    price: 260_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Xiaomi Note 14 Pro",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 190_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Google Pixel 9 Pro",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 210_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "OnePlus 13",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: false,
+    price: 170_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Oppo Find X8 Pro",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 160_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "آیفون 16",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 250_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Samsung S23",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: false,
+    price: 200_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Xiaomi Note 13",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 150_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "آیفون 12",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 150_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Nokia 3310",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: false,
+    price: 10_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Xiaomi Note 8",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 50_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Huawei P50 Pro",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: false,
+    price: 180_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Sony Xperia 1 VI",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: true,
+    price: 220_000_000,
+    entity: 100, 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "LG Velvet 2 Pro",
+    description: STATIC_DESCRIPTION,
+    img: STATIC_PRODUCT_IMG,
+    isPublished: false,
+    price: 140_000_000,
+    entity: 100, 
+  },
+];

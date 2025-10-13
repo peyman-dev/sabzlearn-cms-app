@@ -33,7 +33,7 @@ body {
 }
 
 .pagination {
-  @apply flex justify-center border-t p-4 primary-border-color items-center gap-1 *:cursor-pointer mt-8 ;
+  @apply flex justify-center border-t p-4 primary-border-color items-center gap-1 *:cursor-pointer mt-8;
 }
 
 .pagination-prev-button {
@@ -45,5 +45,17 @@ body {
 }
 
 .pages-ended {
-  @apply opacity-30 cursor-not-allowed hover:bg-transparent hover:text-gray-400
+  @apply opacity-30 cursor-not-allowed hover:bg-transparent hover:text-gray-400;
+}
+
+.badge {
+  @apply text-xs px-1 py-0.5 rounded-md border max-w-max cursor-pointer select-none hover:opacity-80 max-h-max;
+
+  &.success-badge {
+    @apply text-green-500 bg-green-500/10;
+  }
+
+  &.danger-badge {
+    @apply bg-red-500/10 text-red-500;
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import SummaryCard from "./fragments/summary-card";
-import { generateSummaries } from "./settings";
+import { generateSummaries } from "../modules";
 
 export default function Summaries() {
   // Fetch 'Items' dynamicly and generate Options
