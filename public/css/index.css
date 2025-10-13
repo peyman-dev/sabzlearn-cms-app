@@ -9,7 +9,7 @@
 }
 
 @utility primary-bg {
-  @apply bg-gradient-to-t  from-[#019d79] to-[#00bf8f]  border;
+  @apply bg-gradient-to-t cursor-pointer duration-150  hover:opacity-90 transition-all text-white rounded-md focus-within:ring-2 focus-within:ring-teal-500/60 from-[#019d79] to-[#00bf8f]  border border-[#1bd1a7];
 }
 
 @utility flex-center {
@@ -49,7 +49,7 @@ body {
 }
 
 .badge {
-  @apply text-xs px-1 py-0.5 rounded-md border max-w-max cursor-pointer select-none hover:opacity-80 max-h-max;
+  @apply text-xs flex-center gap-1 px-1 py-0.5 rounded-md border max-w-max cursor-pointer select-none hover:opacity-80 max-h-max;
 
   &.success-badge {
     @apply text-green-500 bg-green-500/10;

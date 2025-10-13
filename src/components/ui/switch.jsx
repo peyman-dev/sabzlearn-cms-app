@@ -1,0 +1,29 @@
+import clsx from "clsx";
+import React, { useId } from "react";
+
+export default function Switch({ label, onToggle }) {
+  // const uniqueId = crypto.randomUUID();
+  // OR:
+  const id = useId();
+
+  return (
+    <div className="flex items-center gap-2 text-xs text-neutral-500 select-none">
+      <label htmlFor={id} className="text-neutral-500 text-xs">
+        {label}:
+      </label>
+      <label className="relative inline-flex items-center cursor-pointer">
+        <input
+          type="checkbox"
+          id={id}
+          className="sr-only peer"
+          onChange={(e) => onToggle(e.target.checked)}
+        />
+        <div
+          className={clsx(
+            `w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300  rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-blue-600`
+          )}
+        ></div>
+      </label>
+    </div>
+  );
+}

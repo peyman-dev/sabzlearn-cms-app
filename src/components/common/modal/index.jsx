@@ -5,7 +5,7 @@ import { BiX } from "react-icons/bi";
 import Shortcuts from "./fragments/shortcuts";
 import "./modules/close-modal";
 
-export default function Modal({ Trigger, children, title, FooterButtons, onContinue, onCancel }) {
+export default function Modal({ Trigger, children, title, FooterButtons, onSubmit, onCancel }) {
   const [isOpen, toggle] = useToggle();
   const isValidFooter = React.isValidElement(FooterButtons);
   const disableClick = (e) => e.stopPropagation();
@@ -48,7 +48,7 @@ export default function Modal({ Trigger, children, title, FooterButtons, onConti
             ) : (
               <Shortcuts
                 onClose={toggle}
-                onSubmit={onContinue}
+                onSubmit={onSubmit}
               />
             )}
           </div>
