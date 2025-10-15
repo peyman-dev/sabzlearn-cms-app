@@ -17,7 +17,7 @@
 }
 
 body {
-  @apply font-IRANSansX;
+  @apply overflow-x-hidden! font-IRANSansX;
 }
 
 .pagination-button {

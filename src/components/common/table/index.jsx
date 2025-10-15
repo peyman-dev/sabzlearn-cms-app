@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./fragments/header";
 import Pagination from "./fragments/pagination";
+import clsx from "clsx";
 
 const Table = ({
   header = { title: "لیست آیتم ها", Buttons: undefined },
@@ -10,14 +11,14 @@ const Table = ({
     initialItems: null,
     setPaginatedItems: null,
   },
+  className
 }) => {
   return (
     <div
-      className="mt-10 border bg-white primary-border-color rounded-xl overflow-hidden
-    "
+      className={clsx("mt-10 border bg-white primary-border-color rounded-xl overflow-hidden", className)}
     >
       <Header header={header} />
-      <div className="h-[568px]">{children}</div>
+      <div className="min-h-[568px]">{children}</div>
 
       {pagination.itemsPerView > 1 ? (
         <Pagination

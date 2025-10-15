@@ -16,7 +16,7 @@ export default function ProductCard(product) {
   console.log(product);
   return (
     <Card>
-      <header className="h-[200px] w-full rounded-lg  flex-center overflow-hidden!">
+      <header className="h-[200px] w-full flex-center overflow-hidden!">
         <ProductImage src={product.img} alt={product.title} />
       </header>
       <main className="space-y-2">
