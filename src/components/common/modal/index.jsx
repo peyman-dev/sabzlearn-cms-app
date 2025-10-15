@@ -1,14 +1,27 @@
-import React from "react";
+import React, { isValidElement } from "react";
 import useToggle from "../../../core/hooks/use-toggle";
 import clsx from "clsx";
 import { BiX } from "react-icons/bi";
 import Shortcuts from "./fragments/shortcuts";
 import "./modules/close-modal";
 
-export default function Modal({ Trigger, children, title, FooterButtons, onSubmit, onCancel }) {
-  const [isOpen, toggle] = useToggle();
-  const isValidFooter = React.isValidElement(FooterButtons);
+export default function Modal({
+  Trigger,
+  children,
+  title,
+  FooterButtons,
+  onSubmit,
+  onCancel,
+  isOpen: controlledIsOpen,
+  onToggle: controlledOnToggle,
+}) {
+  const [internalIsOpen, internalToggle] = useToggle();
+  const isOpen =
+    controlledIsOpen !== undefined ? controlledIsOpen : internalIsOpen;
+  const toggle = controlledOnToggle || internalToggle;
   const disableClick = (e) => e.stopPropagation();
+
+  const hasExternalFooter = isValidElement(FooterButtons?.());
 
   return (
     <>
@@ -43,13 +56,10 @@ export default function Modal({ Trigger, children, title, FooterButtons, onSubmi
             {children}
           </div>
           <div className="min-h-14 flex items-center justify-end gap-2 px-4 bg-[#F6F8FA]">
-            {isValidFooter ? (
+            {hasExternalFooter ? (
               <FooterButtons />
             ) : (
-              <Shortcuts
-                onClose={toggle}
-                onSubmit={onSubmit}
-              />
+              <Shortcuts onClose={onCancel || toggle} onSubmit={onSubmit} />
             )}
           </div>
         </div>
