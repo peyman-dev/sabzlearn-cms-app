@@ -21,4 +21,26 @@ const tickets = Array.from({ length: 20 }, (_, index) => {
   };
 });
 
+export const usersArray = Array.from({ length: 50 }, (_, index) => {
+  const randomNames = ["علی", "رضا", "محمد", "زهرا", "سارا", "امیر"];
+  const randomLastName = ["محمدی", "احمدی", "حسینی", "رضایی", "مرادی", "جلالی"];
+  const randomName =
+    randomNames[Math.floor(Math.random() * randomNames.length)];
+  const randomFamily =
+    randomLastName[Math.floor(Math.random() * randomLastName.length)];
+  const randomEmail = `${randomName}.${randomFamily}@example.com`;
+
+  const roles = ["admin", "support", "customer"];
+  const randomRole = roles[Math.floor(Math.random() * roles.length)];
+
+  return {
+    id: crypto.randomUUID(),
+    userName: `${randomName}${index + 1}`,
+    fullName: `${randomName} ${randomFamily}`,
+    phoneNumber: `0912${Math.floor(Math.random() * 90000000) + 10000000}`,
+    email: randomEmail,
+    role: randomRole,
+  };
+});
+
 export { STATIC_PRODUCT_IMG, STATIC_DESCRIPTION, tickets };

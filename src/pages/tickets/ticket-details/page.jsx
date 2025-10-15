@@ -4,6 +4,7 @@ import { tickets } from "../../../core/settings/constants";
 import NotFound from "../../../components/templates/tickets/not-found";
 import Sender from "../../../components/templates/tickets/ticket-details/sender";
 import Messages from "../../../components/templates/tickets/ticket-details/messages";
+import SendMessage from "../../../components/templates/tickets/ticket-details/send-message";
 
 export default function TicketDetailsPage() {
   const { ticketID } = useParams();
@@ -23,7 +24,8 @@ export default function TicketDetailsPage() {
   return (
     <div className="w-[70%] mx-auto space-y-6">
       <Sender title={ticketDetails.title} userName={ticketDetails.fullName} />
-      <Messages messages={ticketDetails.messages}/>
+      <Messages messages={ticketDetails.messages} />
+      <SendMessage />
     </div>
   );
 }
