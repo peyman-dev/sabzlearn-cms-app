@@ -5,6 +5,7 @@ import CommentsPage from "../pages/comments/page.jsx";
 import ProductsPage from "../pages/products/page.jsx";
 import TicketsPage from "../pages/tickets/page.jsx";
 import ApplicationLayout from "../components/layout/index.jsx";
+import TicketDetailsPage from "../pages/tickets/ticket-details/page.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const routes = createBrowserRouter([
       {
         path: "/tickets",
         element: <TicketsPage />,
+      },
+      {
+        path: "/tickets/:ticketID",
+        element: <TicketDetailsPage />,
       },
     ],
   },

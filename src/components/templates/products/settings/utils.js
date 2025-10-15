@@ -21,11 +21,9 @@ export const getBadgeStyles = (isPublished) => {
   if (isPublished)
     return {
       classNames: clsx("badge", "success-badge"),
-      content: "منتشر شده",
     };
   else
     return {
       classNames: clsx("badge", "danger-badge"),
-      content: "خصوصی",
     };
 };
